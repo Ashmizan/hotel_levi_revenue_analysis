@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project analyzes synthetic hotel booking data for a fictional Hotel Levi property in Finnish Lapland.
+This project analyzes synthetic hotel booking data for hotel levi panorama in Sirkka, Levi, Finland.
 
 The objective is to use SQL and Power BI to examine booking patterns, room performance, revenue, seasonality, and customer behavior, and to translate the findings into practical business recommendations.
 
