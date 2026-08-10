@@ -1,0 +1,128 @@
+room_number,room_type,view,room_amenities
+SR-01,Standard Room,Forest view,French balcony or balcony
+SR-02,Standard Room,Forest view,French balcony or balcony
+SR-03,Standard Room,Slope view,French balcony or balcony
+SR-04,Standard Room,Forest view,French balcony or balcony
+SR-05,Standard Room,Forest view,French balcony or balcony
+SR-06,Standard Room,Forest view,French balcony or balcony
+SR-07,Standard Room,Forest view,French balcony or balcony
+SR-08,Standard Room,Forest view,French balcony or balcony
+SR-09,Standard Room,Slope view,French balcony or balcony
+SR-10,Standard Room,Forest view,French balcony or balcony
+SR-11,Standard Room,Forest view,French balcony or balcony
+SR-12,Standard Room,Forest view,French balcony or balcony
+SR-13,Standard Room,Forest view,French balcony or balcony
+SR-14,Standard Room,Forest view,French balcony or balcony
+SR-15,Standard Room,Forest view,French balcony or balcony
+SR-16,Standard Room,Forest view,French balcony or balcony
+SR-17,Standard Room,Slope view,French balcony or balcony
+SR-18,Standard Room,Forest view,French balcony or balcony
+SR-19,Standard Room,Slope view,French balcony or balcony
+SR-20,Standard Room,Slope view,French balcony or balcony
+SR-21,Standard Room,Forest view,French balcony or balcony
+SR-22,Standard Room,Forest view,French balcony or balcony
+SR-23,Standard Room,Slope view,French balcony or balcony
+SR-24,Standard Room,Slope view,French balcony or balcony
+SR-25,Standard Room,Slope view,French balcony or balcony
+SR-26,Standard Room,Forest view,French balcony or balcony
+SR-27,Standard Room,Forest view,French balcony or balcony
+SR-28,Standard Room,Slope view,French balcony or balcony
+SR-29,Standard Room,Forest view,French balcony or balcony
+SR-30,Standard Room,Forest view,French balcony or balcony
+SR-31,Standard Room,Slope view,French balcony or balcony
+SR-32,Standard Room,Forest view,French balcony or balcony
+SR-33,Standard Room,Slope view,French balcony or balcony
+SR-34,Standard Room,Slope view,French balcony or balcony
+SR-35,Standard Room,Slope view,French balcony or balcony
+SR-36,Standard Room,Forest view,French balcony or balcony
+SR-37,Standard Room,Slope view,French balcony or balcony
+SR-38,Standard Room,Forest view,French balcony or balcony
+SR-39,Standard Room,Slope view,French balcony or balcony
+SR-40,Standard Room,Forest view,French balcony or balcony
+SR-41,Standard Room,Slope view,French balcony or balcony
+SR-42,Standard Room,Slope view,French balcony or balcony
+SR-43,Standard Room,Forest view,French balcony or balcony
+SR-44,Standard Room,Forest view,French balcony or balcony
+SR-45,Standard Room,Forest view,French balcony or balcony
+SR-46,Standard Room,Forest view,French balcony or balcony
+SR-47,Standard Room,Slope view,French balcony or balcony
+SV-01,Standard View Room,Slope view,French balcony or balcony
+SV-02,Standard View Room,Slope view,French balcony or balcony
+SV-03,Standard View Room,Slope view,French balcony or balcony
+SV-04,Standard View Room,Forest view,French balcony or balcony
+SV-05,Standard View Room,Forest view,French balcony or balcony
+SV-06,Standard View Room,Forest view,French balcony or balcony
+SV-07,Standard View Room,Forest view,French balcony or balcony
+SV-08,Standard View Room,Slope view,French balcony or balcony
+SV-09,Standard View Room,Forest view,French balcony or balcony
+SV-10,Standard View Room,Forest view,French balcony or balcony
+SV-11,Standard View Room,Slope view,French balcony or balcony
+SV-12,Standard View Room,Forest view,French balcony or balcony
+SV-13,Standard View Room,Slope view,French balcony or balcony
+SV-14,Standard View Room,Slope view,French balcony or balcony
+SV-15,Standard View Room,Slope view,French balcony or balcony
+SV-16,Standard View Room,Slope view,French balcony or balcony
+SV-17,Standard View Room,Forest view,French balcony or balcony
+SV-18,Standard View Room,Forest view,French balcony or balcony
+SV-19,Standard View Room,Forest view,French balcony or balcony
+SV-20,Standard View Room,Slope view,French balcony or balcony
+SV-21,Standard View Room,Forest view,French balcony or balcony
+SV-22,Standard View Room,Slope view,French balcony or balcony
+SV-23,Standard View Room,Slope view,French balcony or balcony
+SV-24,Standard View Room,Slope view,French balcony or balcony
+SV-25,Standard View Room,Forest view,French balcony or balcony
+SV-26,Standard View Room,Forest view,French balcony or balcony
+SV-27,Standard View Room,Forest view,French balcony or balcony
+SV-28,Standard View Room,Slope view,French balcony or balcony
+SV-29,Standard View Room,Slope view,French balcony or balcony
+SV-30,Standard View Room,Forest view,French balcony or balcony
+SV-31,Standard View Room,Slope view,French balcony or balcony
+SV-32,Standard View Room,Forest view,French balcony or balcony
+SV-33,Standard View Room,Forest view,French balcony or balcony
+SV-34,Standard View Room,Forest view,French balcony or balcony
+SV-35,Standard View Room,Slope view,French balcony or balcony
+SV-36,Standard View Room,Forest view,French balcony or balcony
+SV-37,Standard View Room,Slope view,French balcony or balcony
+SV-38,Standard View Room,Slope view,French balcony or balcony
+SV-39,Standard View Room,Forest view,French balcony or balcony
+SV-40,Standard View Room,Forest view,French balcony or balcony
+SU-01,Superior Room,Slope view,French balcony or balcony
+SU-02,Superior Room,Slope view,French balcony or balcony
+SU-03,Superior Room,Forest view,French balcony or balcony
+SU-04,Superior Room,Forest view,French balcony or balcony
+SU-05,Superior Room,Slope view,French balcony or balcony
+SU-06,Superior Room,Forest view,French balcony or balcony
+SU-07,Superior Room,Forest view,French balcony or balcony
+SU-08,Superior Room,Forest view,French balcony or balcony
+SU-09,Superior Room,Forest view,French balcony or balcony
+SU-10,Superior Room,Forest view,French balcony or balcony
+SU-11,Superior Room,Slope view,French balcony or balcony
+SU-12,Superior Room,Forest view,French balcony or balcony
+SU-13,Superior Room,Slope view,French balcony or balcony
+SU-14,Superior Room,Slope view,French balcony or balcony
+SU-15,Superior Room,Slope view,French balcony or balcony
+SU-16,Superior Room,Slope view,French balcony or balcony
+SU-17,Superior Room,Forest view,French balcony or balcony
+SU-18,Superior Room,Forest view,French balcony or balcony
+SU-19,Superior Room,Slope view,French balcony or balcony
+SU-20,Superior Room,Slope view,French balcony or balcony
+SF-01,Superior Family Room,Forest view,French balcony or balcony
+SF-02,Superior Family Room,Slope view,French balcony or balcony
+SF-03,Superior Family Room,Slope view,French balcony or balcony
+SF-04,Superior Family Room,Forest view,French balcony or balcony
+SF-05,Superior Family Room,Slope view,French balcony or balcony
+SF-06,Superior Family Room,Forest view,French balcony or balcony
+SF-07,Superior Family Room,Slope view,French balcony or balcony
+SF-08,Superior Family Room,Forest view,French balcony or balcony
+SF-09,Superior Family Room,Forest view,French balcony or balcony
+SF-10,Superior Family Room,Slope view,French balcony or balcony
+DR-01,Deluxe Room,Forest view,Bathtub and sauna; French balcony or balcony
+DR-02,Deluxe Room,Forest view,Bathtub and sauna; French balcony or balcony
+DR-03,Deluxe Room,Slope view,Bathtub and sauna; French balcony or balcony
+DR-04,Deluxe Room,Forest view,Bathtub and sauna; French balcony or balcony
+DR-05,Deluxe Room,Forest view,Bathtub and sauna; French balcony or balcony
+SS-01,Sky Suite,Slope view,Igloo; bathtub; sauna; French balcony or balcony
+SS-02,Sky Suite,Forest view,Igloo; bathtub; sauna; French balcony or balcony
+DS-01,Deluxe Sky Suite,Forest view,Igloo; bathtub; sauna; French balcony or balcony
+DS-02,Deluxe Sky Suite,Forest view,Igloo; bathtub; sauna; French balcony or balcony
+DS-03,Deluxe Sky Suite,Forest view,Igloo; bathtub; sauna; French balcony or balcony
