@@ -98,35 +98,249 @@ So I'd prioritize Corporate bookings because they're generating the highest tota
 
 Recommendation: I would prioritize the Deluxe Sky Suite and the Corporate booking channel. 
   The Deluxe Sky Suite generates the highest total revenue (€63,240) and the highest average revenue per booking (€1,071.86), despite having fewer bookings than the other premium room types.
-
-
+  The Corporate channel generates the highest total revenue (€111,778) among completed bookings. Therefore, the hotel could focus on promoting the Deluxe Sky Suite through the Corporate channel
+  the highest total revenue (€111,778) among completed bookings. Therefore, the hotel could focus on promoting the Deluxe Sky Suite through the Corporate channel to maximize revenue.
 
   21. What is the average nightly room rate in winter compared with the other seasons?
+  SELECT
+AVG(nightly_rate_eur) AS average_nightly_rate
+FROM bookings
+WHERE season = 'Winter'
+ORDER BY average_nightly_rate DESC;
+SELECT
+AVG(nightly_rate_eur) AS average_nightly_rate
+FROM bookings
+WHERE season != 'Winter'
+ORDER BY average_nightly_rate DESC;
+
   22. What is the average winter nightly rate for each room type?
+    SELECT room_type,
+AVG(nightly_rate_eur) AS average_nightly_rate
+FROM bookings
+WHERE season = 'Winter'
+GROUP BY room_type
+ORDER BY average_nightly_rate DESC;
+
   23. Which room type has the highest average winter nightly rate?
+    SELECT room_type,
+AVG(nightly_rate_eur) AS average_nightly_rate
+FROM bookings
+WHERE season = 'Winter'
+GROUP BY room_type
+ORDER BY average_nightly_rate DESC
+LIMIT 1;
+
   24. Which room type has the lowest average winter nightly rate?
-  25. Which room type experiences the largest increase in nightly rate during wintr compared with the other seasons?
+    SELECT room_type,
+AVG(nightly_rate_eur) AS average_nightly_rate
+FROM bookings
+WHERE season = 'Winter'
+GROUP BY room_type
+ORDER BY average_nightly_rate ASC
+LIMIT 1;
+
+  25. Which room type experiences the largest increase in nightly rate during winter compared with the other seasons?
+  SELECT
+    room_type,
+    AVG(nightly_rate_eur) FILTER (WHERE season = 'Winter')
+      - AVG(nightly_rate_eur) FILTER (WHERE season != 'Winter')
+      AS winter_increase
+FROM bookings
+GROUP BY room_type
+ORDER BY winter_increase DESC
+LIMIT 1;
+    "Deluxe Sky Suite"	295.3333333333333333
   26. What is the percentage change in average nightly rate for each room type  between winter and non-winter?
+      SELECT
+    room_type,
+    AVG(nightly_rate_eur) FILTER (WHERE season = 'Winter') AS winter_avg,
+    AVG(nightly_rate_eur) FILTER (WHERE season != 'Winter') AS non_winter_avg,
+    ROUND(
+        (
+            AVG(nightly_rate_eur) FILTER (WHERE season = 'Winter')
+            - AVG(nightly_rate_eur) FILTER (WHERE season != 'Winter')
+        )
+        / AVG(nightly_rate_eur) FILTER (WHERE season != 'Winter') * 100,
+        2
+    ) AS percentage_change
+FROM bookings
+GROUP BY room_type
+ORDER BY percentage_change DESC;
+
   27. How does the Deluxe Sky Suite average nightly rate change between winter and non-winter?
+    SELECT
+    AVG(nightly_rate_eur) FILTER (WHERE season = 'Winter') AS winter_avg,
+    AVG(nightly_rate_eur) FILTER (WHERE season != 'Winter') AS non_winter_avg,
+    AVG(nightly_rate_eur) FILTER (WHERE season = 'Winter')
+      - AVG(nightly_rate_eur) FILTER (WHERE season != 'Winter') AS difference
+FROM bookings
+WHERE room_type = 'Deluxe Sky Suite';
+
   28. Does the Sky Suite experience a larger winter price increase than the Deluxe Room?
+    SELECT
+    room_type,
+    AVG(nightly_rate_eur) FILTER (WHERE season = 'Winter') AS winter_avg,
+    AVG(nightly_rate_eur) FILTER (WHERE season != 'Winter') AS non_winter_avg,
+    AVG(nightly_rate_eur) FILTER (WHERE season = 'Winter')
+      - AVG(nightly_rate_eur) FILTER (WHERE season != 'Winter') AS winter_increase
+FROM bookings
+WHERE room_type IN ('Sky Suite', 'Deluxe Room')
+GROUP BY room_type
+ORDER BY winter_increase DESC;
+
   29. Which room type has the largest difference between its minimum and maximum nightly rate?
+    SELECT
+    room_type,
+    MIN(nightly_rate_eur) AS minimum_rate,
+    MAX(nightly_rate_eur) AS maximum_rate,
+    MAX(nightly_rate_eur) - MIN(nightly_rate_eur) AS rate_difference
+FROM bookings
+GROUP BY room_type
+ORDER BY rate_difference DESC
+LIMIT 1;
+
   30. Which room type appears to have the most variable pricing across seasons?
+    SELECT
+    room_type,
+    MAX(avg_seasonal_rate) - MIN(avg_seasonal_rate) AS seasonal_price_variation
+FROM (
+    SELECT
+        room_type,
+        season,
+        AVG(nightly_rate_eur) AS avg_seasonal_rate
+    FROM bookings
+    GROUP BY room_type, season
+) AS seasonal_rates
+GROUP BY room_type
+ORDER BY seasonal_price_variation DESC
+LIMIT 1;
+
   31. Which room type receives the most bookings during winter?
+    SELECT
+    room_type,
+    COUNT(*) AS winter_bookings
+FROM bookings
+WHERE season = 'Winter'
+GROUP BY room_type
+ORDER BY winter_bookings DESC
+LIMIT 1;
+
   32. Which room type generates the highest total winter revenue?
+SELECT
+    room_type,
+    SUM(nightly_rate_eur * nights) AS winter_revenue
+FROM bookings
+WHERE season = 'Winter'
+GROUP BY room_type
+ORDER BY winter_revenue DESC
+LIMIT 1;
+
   33. Which room type generates the highest average revenue per winter booking?
+    SELECT
+    room_type,
+    AVG(nightly_rate_eur * nights) AS avg_revenue_per_booking
+FROM bookings
+WHERE season = 'Winter'
+GROUP BY room_type
+ORDER BY avg_revenue_per_booking DESC
+LIMIT 1;
+
   34. Which room type has the highest average number of nights per winter booking?
+    SELECT
+    room_type,
+    AVG(nights) AS avg_nights
+FROM bookings
+WHERE season = 'Winter'
+GROUP BY room_type
+ORDER BY avg_nights DESC
+LIMIT 1;
+
   35. Compare the Deluxe Room, Sky Suite and Deluxe Sky Suite during winter in terms of:
   booking volume
   average nightly rate
   average nights
   total revenue
+
+    SELECT
+    room_type,
+    COUNT(*) AS booking_volume,
+    AVG(nightly_rate_eur) AS average_nightly_rate,
+    AVG(nights) AS average_nights,
+    SUM(nightly_rate_eur * nights) AS total_revenue
+FROM bookings
+WHERE season = 'Winter'
+  AND room_type IN ('Deluxe Room', 'Sky Suite', 'Deluxe Sky Suite')
+GROUP BY room_type
+ORDER BY total_revenue DESC;
+
   36. Which room types have high winter rates but relatively low booking demand?
+    SELECT
+    room_type,
+    COUNT(*) AS booking_volume,
+    AVG(nightly_rate_eur) AS average_winter_rate
+FROM bookings
+WHERE season = 'Winter'
+GROUP BY room_type
+ORDER BY average_winter_rate DESC;
+
   37. Which room types have lower winter rates but relatively high demand?
+    SELECT
+    room_type,
+    COUNT(*) AS booking_volume,
+    AVG(nightly_rate_eur) AS average_winter_rate
+FROM bookings
+WHERE season = 'Winter'
+GROUP BY room_type
+ORDER BY average_winter_rate ASC;
+
   38. Do higher winter nightly rates appear to be associated with shorter stays?
+    SELECT
+    room_type,
+    AVG(nightly_rate_eur) AS average_winter_rate,
+    AVG(nights) AS average_nights
+FROM bookings
+WHERE season = 'Winter'
+GROUP BY room_type
+ORDER BY average_winter_rate DESC;
+
   39. Which booking channel generates the highest winter revenue, and does it also
   generate the highest number of winter bookings?
+    SELECT
+    booking_channel,
+    COUNT(*) AS winter_bookings,
+    SUM(nightly_rate_eur * nights) AS winter_revenue
+FROM bookings
+WHERE season = 'Winter'
+GROUP BY booking_channel
+ORDER BY winter_revenue DESC;
+
   40. If Hotel Levi wanted to maximize winter revenue, which room type and booking channel
   would you prioritize? Support your recommendation using winter booking volume, average nightly rate,
   length of stay, and total revenue.
-  The Corporate channel generates the highest total revenue (€111,778) among completed bookings. Therefore, the hotel could focus on promoting the Deluxe Sky Suite through the Corporate channel
-  the highest total revenue (€111,778) among completed bookings. Therefore, the hotel could focus on promoting the Deluxe Sky Suite through the Corporate channel to maximize revenue.
+
+  Compare room types:
+SELECT
+    room_type,
+    COUNT(*) AS winter_bookings,
+    AVG(nightly_rate_eur) AS average_nightly_rate,
+    AVG(nights) AS average_nights,
+    SUM(nightly_rate_eur * nights) AS total_revenue
+FROM bookings
+WHERE season = 'Winter'
+GROUP BY room_type
+ORDER BY total_revenue DESC;
+
+Compare booking channels:
+SELECT
+    booking_channel,
+    COUNT(*) AS winter_bookings,
+    AVG(nightly_rate_eur) AS average_nightly_rate,
+    AVG(nights) AS average_nights,
+    SUM(nightly_rate_eur * nights) AS total_revenue
+FROM bookings
+WHERE season = 'Winter'
+GROUP BY booking_channel
+ORDER BY total_revenue DESC;
+I would prioritize [room type] because it generates the highest/strongest winter revenue while maintaining [X] bookings, an average nightly rate of €X, and an average stay of X nights.
+For booking channels, I would prioritize [channel] because it generates €X in winter revenue from X bookings, with an average nightly rate of €X and average stay of X nights.
+  
