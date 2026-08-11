@@ -94,7 +94,39 @@ Expedia → €76,920
 
 So I'd prioritize Corporate bookings because they're generating the highest total revenue among completed bookings.
 
+
+
 Recommendation: I would prioritize the Deluxe Sky Suite and the Corporate booking channel. 
   The Deluxe Sky Suite generates the highest total revenue (€63,240) and the highest average revenue per booking (€1,071.86), despite having fewer bookings than the other premium room types.
+
+
+
+  21. What is the average nightly room rate in winter compared with the other seasons?
+  22. What is the average winter nightly rate for each room type?
+  23. Which room type has the highest average winter nightly rate?
+  24. Which room type has the lowest average winter nightly rate?
+  25. Which room type experiences the largest increase in nightly rate during wintr compared with the other seasons?
+  26. What is the percentage change in average nightly rate for each room type  between winter and non-winter?
+  27. How does the Deluxe Sky Suite average nightly rate change between winter and non-winter?
+  28. Does the Sky Suite experience a larger winter price increase than the Deluxe Room?
+  29. Which room type has the largest difference between its minimum and maximum nightly rate?
+  30. Which room type appears to have the most variable pricing across seasons?
+  31. Which room type receives the most bookings during winter?
+  32. Which room type generates the highest total winter revenue?
+  33. Which room type generates the highest average revenue per winter booking?
+  34. Which room type has the highest average number of nights per winter booking?
+  35. Compare the Deluxe Room, Sky Suite and Deluxe Sky Suite during winter in terms of:
+  booking volume
+  average nightly rate
+  average nights
+  total revenue
+  36. Which room types have high winter rates but relatively low booking demand?
+  37. Which room types have lower winter rates but relatively high demand?
+  38. Do higher winter nightly rates appear to be associated with shorter stays?
+  39. Which booking channel generates the highest winter revenue, and does it also
+  generate the highest number of winter bookings?
+  40. If Hotel Levi wanted to maximize winter revenue, which room type and booking channel
+  would you prioritize? Support your recommendation using winter booking volume, average nightly rate,
+  length of stay, and total revenue.
   The Corporate channel generates the highest total revenue (€111,778) among completed bookings. Therefore, the hotel could focus on promoting the Deluxe Sky Suite through the Corporate channel
   the highest total revenue (€111,778) among completed bookings. Therefore, the hotel could focus on promoting the Deluxe Sky Suite through the Corporate channel to maximize revenue.
