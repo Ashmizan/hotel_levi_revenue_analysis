@@ -105,14 +105,15 @@ Recommendation: I would prioritize the Deluxe Sky Suite and the Corporate bookin
   SELECT
 AVG(nightly_rate_eur) AS average_nightly_rate
 FROM bookings
-WHERE season = 'Winter'
-ORDER BY average_nightly_rate DESC;
+WHERE season = 'Winter';
+Average_nightly_rate
+162.8401585204755614
 SELECT
 AVG(nightly_rate_eur) AS average_nightly_rate
 FROM bookings
-WHERE season != 'Winter'
-ORDER BY average_nightly_rate DESC;
-
+WHERE season != 'Winter';
+Average_nightly_rate
+  144.4037685060565276
   22. What is the average winter nightly rate for each room type?
     SELECT room_type,
 AVG(nightly_rate_eur) AS average_nightly_rate
