@@ -192,17 +192,8 @@ hotel_levi_revenue_analysis/
 │   └── hotel_levi_room_inventory.csv
 │
 ├── sql/
-│   ├── 01_data_validation.sql
-│   ├── 02_booking_analysis.sql
-│   ├── 03_revenue_analysis.sql
-│   ├── 04_room_performance.sql
-│   └── 05_customer_analysis.sql
-│
+│   ├── 01_practice_questions.sql
+│   ├── 02_business_analysis.sql
+
 ├── powerbi/
 │   └── hotel_levi_dashboard.pbix
-│
-├── screenshots/
-│   └── dashboard_preview.png
-│
-└── documentation/
-    └── data_dictionary.md
